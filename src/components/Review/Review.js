@@ -6,7 +6,6 @@ import {
     removeFromDatabaseCart,
     processOrder,
 } from "../../utilities/databaseManager";
-import fakeData from "../../fakeData";
 import ReviewItem from "../ReviewItem/ReviewItem";
 import Cart from "../Cart/Cart";
 import happyImage from "../../images/giphy.gif";
