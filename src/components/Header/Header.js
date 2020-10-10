@@ -1,11 +1,14 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { UserContext } from "../../App";
 import logo from "../../images/logo.png";
 import "./Header.css";
 const Header = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-    console.log(loggedInUser);
+    const history = useHistory();
+    const handleSignIn = () => {
+        history.push("/login");
+    };
     return (
         <div className="header">
             <img src={logo} alt="" />
@@ -22,7 +25,7 @@ const Header = () => {
                         Sign Out
                     </button>
                 ) : (
-                    <button>Sign In</button>
+                    <button onClick={handleSignIn}>Sign In</button>
                 )}
             </nav>
         </div>

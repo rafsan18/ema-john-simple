@@ -33,7 +33,7 @@ const Shipment = () => {
             });
     };
 
-    console.log(watch("example")); // watch input value by passing the name of it
+    //console.log(watch("example")); // watch input value by passing the name of it
 
     return (
         <div className="row">
