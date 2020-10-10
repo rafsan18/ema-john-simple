@@ -71,7 +71,6 @@ function Login() {
     const handleResponse = (res, redirect) => {
         setUser(res);
         setLoggedInUser(res);
-        console.log(res);
         if (redirect) {
             history.replace(from);
         }
