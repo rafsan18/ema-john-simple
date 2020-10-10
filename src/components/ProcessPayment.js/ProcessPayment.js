@@ -11,7 +11,7 @@ const ProcessPayment = () => {
     return (
         <div>
             <Elements stripe={stripePromise}>
-                <SplitCardForm></SplitCardForm>
+                <SimpleCardForm></SimpleCardForm>
             </Elements>
         </div>
     );

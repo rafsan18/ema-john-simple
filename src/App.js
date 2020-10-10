@@ -2,7 +2,7 @@ import React, { createContext, useState } from "react";
 import "./App.css";
 import Header from "./components/Header/Header";
 import Shop from "./components/Shop/Shop";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Review from "./components/Review/Review";
 import Inventory from "./components/Inventory/Inventory";
 import NotFound from "./components/NotFound/NotFound";
@@ -15,10 +15,10 @@ export const UserContext = createContext();
 
 function App() {
     const [loggedInUser, setLoggedInUser] = useState({});
-    console.log(loggedInUser);
 
     return (
         <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+            <h3>email: {loggedInUser.email}</h3>
             <Router>
                 <Header></Header>
                 <Switch>
